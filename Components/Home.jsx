@@ -9,7 +9,7 @@ class Home extends React.Component {
     this.state = {
      bordomLevel: 10,
      sleepLevel:10,
-     foodLevel:10
+     foodLevel:3
     };
     this.handleStartGame = this.handleStartGame.bind(this);
     this.handleFeedToma = this.handleFeedToma.bind(this);
@@ -31,7 +31,7 @@ class Home extends React.Component {
  this.startTimer = setInterval(() =>
    this.handleStartGame(),
 
-   3000
+   1000
  );
 }
 
@@ -39,9 +39,11 @@ class Home extends React.Component {
   handleFeedToma(){
     this.setState({foodLevel: this.state.foodLevel+1});
   }
-  // checkLevel(){
-  //
-  // }
+  checkLife(){
+  if(this.state.foodlevel=== 0){
+    alert('hey your dead')
+  }
+  }
 
   handleSleepToma(){
     this.setState({sleepLevel: this.state.sleepLevel+1});
@@ -53,7 +55,11 @@ class Home extends React.Component {
 
 
   render(){
-
+    if(this.state.foodLevel <= 0){
+      var displayThisWhenAlive = 'Tamagotchi is dead';
+    } else {
+      var displaythisWhenDead = 'Tomagotchi is alive';
+    }
     return (
       <div>
         <button onClick={this.handleStartGame}>Play game</button>
@@ -65,6 +71,7 @@ class Home extends React.Component {
         <button onClick={this.handleFeedToma}>feed</button>
         <button onClick={this.handleSleepToma}>sleep</button>
         <button onClick={this.handleBordomToma}>Play</button>
+        <p>{displayThisWhenAlive}{displaythisWhenDead}</p>
       </div>
 
     );
