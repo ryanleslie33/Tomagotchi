@@ -14,22 +14,17 @@ function Welcome(props){
 
   return (
     <div style={style}>
-  <p>Welcome to Tomagotchi</p>
-  <img src={toma}/>
-   <Link to="/Home">Click here to play game!!</Link>
-  
-
-   <br/>
-   <br/>
-   <br/>
-   <br/>
-   <br/>
-   <br/>
+      <p>Welcome to Tomagotchi</p>
+      <img src={toma}/>
+      <Link to="/Home">Click here to play game!!</Link>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
   );
 }
-
-
-
 
 export default Welcome;

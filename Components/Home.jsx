@@ -12,9 +12,9 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-     bordomLevel: 10,
-     sleepLevel:10,
-     foodLevel:10
+      bordomLevel: 10,
+      sleepLevel:10,
+      foodLevel:10
     };
     this.handleStartGame = this.handleStartGame.bind(this);
     this.handleFeedToma = this.handleFeedToma.bind(this);
@@ -34,49 +34,46 @@ class Home extends React.Component {
 
 
   componentDidMount() {
- this.startTimer = setInterval(() =>
-   this.handleStartGame(),
+    this.startTimer = setInterval(() =>
+    this.handleStartGame(),
 
-   2000
- );
+    2000
+  );
 }
 
 componentWillUnmount(){
- clearInterval(this.startTimer);
+  clearInterval(this.startTimer);
 }
 
-  handleFeedToma(){
-    this.setState({foodLevel: this.state.foodLevel+1});
+handleFeedToma(){
+  this.setState({foodLevel: this.state.foodLevel+1});
+}
+
+handleSleepToma(){
+  this.setState({sleepLevel: this.state.sleepLevel+1});
+}
+
+handleBordomToma(){
+  this.setState({bordomLevel: this.state.bordomLevel +1});
+}
+handlePlayAgain(){
+  this.setState({sleepLevel: 10})
+  this.setState({foodLevel: 10})
+  this.setState({bordomLevel: 10})
+  this.componentDidMount();
+}
+
+
+render(){
+  let main = {
+    backgroundColor:'grey',
+    fontSize:'40px',
   }
-
-
-
-  handleSleepToma(){
-    this.setState({sleepLevel: this.state.sleepLevel+1});
-  }
-
-  handleBordomToma(){
-    this.setState({bordomLevel: this.state.bordomLevel +1});
-  }
-  handlePlayAgain(){
-    this.setState({sleepLevel: 10})
-    this.setState({foodLevel: 10})
-    this.setState({bordomLevel: 10})
-    this.componentDidMount();
-  }
-
-
-
-  render(){
-    let main = {
-      backgroundColor:'grey',
-      fontSize:'40px',
-    }
-    if(this.state.foodLevel <= 0 || this.state.sleepLevel <= 0){
-         clearInterval(this.startTimer);
-      var displayThisAboutLife = <img src={skull}/>;
-    } else {
-      var displayThisAboutLife = <strong>Tomagotchi is alive</strong>;
+  if(this.state.foodLevel <= 0 || this.state.sleepLevel <= 0){
+    clearInterval(this.startTimer);
+    var displayThisAboutLife = <img src={skull}/>;
+  } else {
+    var displayThisAboutLife = <strong>Tomagotchi is alive</strong>;
     }
     return (
       <div style={main}>
@@ -91,16 +88,10 @@ componentWillUnmount(){
         <button onClick={this.handleBordomToma}>Play</button>
         <button onClick={this.handlePlayAgain}>Play again</button>
         <p>{displayThisAboutLife}</p>
-
       </div>
 
     );
   }
 }
-// Home.propTypes = {
-//   componentWillUnmount: PropTypes.func
-// };
-
-
 
 export default Home;

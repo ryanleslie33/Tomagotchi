@@ -15,8 +15,6 @@ let linkStyle = {
 }
 
 function Header(){
-
-
   return (
     <div>
     <AppBar style={header} position="static" color="default">

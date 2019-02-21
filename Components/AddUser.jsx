@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import   React  from 'react';
 
-
-
 class AddUser extends React.Component{
-   _name :string;
-   _pet:string;
+  _name :string;
+  _pet:string;
 
   constructor(props){
     super(props);
@@ -23,22 +21,21 @@ class AddUser extends React.Component{
 
   }
 
-
   render(){
     return (
       <div>
-      <form onSubmit={this.handleNewUser} >
-      <input
-      placeholder='name'
-      ref={(input) => {this._name = input}}
-      />
-      <input
-      placeholder='pet'
-      ref={(input) => {this._pet = input}}
-      />
+        <form onSubmit={this.handleNewUser} >
+          <input
+            placeholder='name'
+            ref={(input) => {this._name = input}}
+            />
+          <input
+            placeholder='pet'
+            ref={(input) => {this._pet = input}}
+            />
 
-      <button type='submit'>submit</button>
-      </form>
+          <button type='submit'>submit</button>
+        </form>
 
       </div>
     )
@@ -48,7 +45,5 @@ class AddUser extends React.Component{
 AddUser.propTypes = {
   onNewUserCreation: PropTypes.func
 };
-
-
 
 export default AddUser;

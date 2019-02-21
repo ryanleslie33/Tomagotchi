@@ -11,28 +11,28 @@ class UserList extends React.Component{
     super(props);
     this.state = {
     };
-}
-render(){
-  let style = {
-    fontSize:'40px',
-    display:'grid',
-    backgroundColor:'#42f4e2'
   }
-  return (
-    <div style={style}>
-  <p>Welcome to Tomagotchi</p>
-  <img src={toma}/>
-   <Link to="/Home">Click here to play game!!</Link>
+  render(){
+    let style = {
+      fontSize:'40px',
+      display:'grid',
+      backgroundColor:'#42f4e2'
+    }
+    return (
+      <div style={style}>
+        <p>Welcome to Tomagotchi</p>
+        <img src={toma}/>
+        <Link to="/Home">Click here to play game!!</Link>
 
-    {this.props.userList.map((user) =>
-      <User name={user.name}
-        pet={user.pet}
+        {this.props.userList.map((user) =>
+          <User name={user.name}
+            pet={user.pet}
 
-    />
-  )}
-</div>
-)
-}
+            />
+        )}
+      </div>
+    )
+  }
 }
 UserList.propTypes = {
   userList: PropTypes.array
