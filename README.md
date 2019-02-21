@@ -1,5 +1,5 @@
 # _Tamagotchi_   
-                      ![image](https://user-images.githubusercontent.com/43968782/53195339-51969600-35ca-11e9-89ee-05d5b61d5cf4.png)
+![image](https://user-images.githubusercontent.com/43968782/53195339-51969600-35ca-11e9-89ee-05d5b61d5cf4.png)
 
 
 #### _School course in creating a web app in React, with NPM._
