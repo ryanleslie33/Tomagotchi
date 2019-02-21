@@ -8,6 +8,7 @@ import AddUser from './AddUser'
 import UserList from './UserList'
 
 
+
 class App extends React.Component{
   constructor(props) {
     super(props);
@@ -29,8 +30,10 @@ class App extends React.Component{
       <div>
       <Header/>
       <Switch>
-      <Route exact path='/' component={Welcome} />
-      <Route exact path='/home' render={()=><AddUser onNewUserCreation={this.handleAddingNewUserToList} />} />
+      <Route exact path='/' render={()=><UserList userList={this.state.masterUserList} />} />
+      <Route exact path='/home' component={Home} />
+      <Route exact path='/new' render={()=><AddUser onNewUserCreation={this.handleAddingNewUserToList} />} />
+        // <Route exact path='/thing' render={()=><UserList userList={this.state.masterUserList} />} />
       </Switch>
       </div>
     );

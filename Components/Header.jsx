@@ -25,6 +25,8 @@ function Header(){
         <Typography variant="h6" color="inherit">
           <Link to="/">Home</Link>
           <br/>
+          <Link to="/new">add user</Link>
+          <br/>
 
         </Typography>
       </Toolbar>

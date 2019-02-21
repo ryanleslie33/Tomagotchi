@@ -12,10 +12,10 @@ class AddUser extends React.Component{
     this.state={
     };
 
-    this.handleNewPerson = this.handleNewPerson.bind(this);
+    this.handleNewUser = this.handleNewUser.bind(this);
   }
 
-  handleNewPerson(event) {
+  handleNewUser(event) {
     event.preventDefault();
     this.props.onNewUserCreation({name:this._name.value, pet:this._pet.value });
     this._name.value = '';
@@ -27,7 +27,7 @@ class AddUser extends React.Component{
   render(){
     return (
       <div>
-      <form onSubmit={this.handleNewPerson} >
+      <form onSubmit={this.handleNewUser} >
       <input
       placeholder='name'
       ref={(input) => {this._name = input}}

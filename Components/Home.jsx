@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import * as ExternalStyle from '../src/assets/styles.js';
 import skull from '../src/assets/images/skull.png'
 import Header from './Header'
+import UserList from './UserList'
+import User from './User'
 class Home extends React.Component {
 
 
@@ -39,11 +41,9 @@ class Home extends React.Component {
  );
 }
 
-// props.componentWillUnmount(){
-//   clearInterval(this.startTimer);
-// }
-
-
+componentWillUnmount(){
+ clearInterval(this.startTimer);
+}
 
   handleFeedToma(){
     this.setState({foodLevel: this.state.foodLevel+1});
@@ -91,13 +91,7 @@ class Home extends React.Component {
         <button onClick={this.handleBordomToma}>Play</button>
         <button onClick={this.handlePlayAgain}>Play again</button>
         <p>{displayThisAboutLife}</p>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+
       </div>
 
     );

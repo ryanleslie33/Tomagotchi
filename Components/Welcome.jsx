@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import toma from '../src/assets/images/toma.jpg';
 import AddUser from './AddUser';
+import UserList from './UserList';
+
 function Welcome(props){
   let style = {
     fontSize:'40px',
@@ -15,7 +17,8 @@ function Welcome(props){
   <p>Welcome to Tomagotchi</p>
   <img src={toma}/>
    <Link to="/Home">Click here to play game!!</Link>
-   <AddUser/>
+  
+
    <br/>
    <br/>
    <br/>
