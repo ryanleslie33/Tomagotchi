@@ -1,18 +1,18 @@
-# _Test Page in React._
+# _Tamagotchi_
 
 #### _School course in creating a web app in React, with NPM._
 
-#### By _**Robert Lee**_
+#### By _**Robert Lee and Ryan Leslie**_
 
 ## Description
 
-_A practice website in React._
+_This is a React application that is a Tamagotchi clone, use for practice with set time intervals and lifting state._
 
 ## Setup/Installation Requirements
 
 * _Clone the applications from github by going to the terminal window command line and typing:_
 
-$ git clone https://github.com/bobbydwise1/react-weekend.git
+$ git clone https://github.com/bobbydwise1/Tomagotchi.git
 
 * _After all the files have been copied, navigate to the project working directory.  Type the following:_
 
@@ -20,7 +20,7 @@ $ npm install
 
 * _Node Package Manager (npm) should automatically start downloading all required dependencies.  After all files have been downloaded, type the following:_
 
-$ webpack-dev-server
+$npm  run start
 
 * _The terminal window will run the server._
 
@@ -30,6 +30,15 @@ $ webpack-dev-server
 
 ## Working Features
 * _A simple practice website for using React static components and CSS._
+* _Uses buttons to update state values_
+
+## specifications
+* _begins with a home page with a link to play game._
+* _Once user clicks the link a score board will display with sleep, food, and boredom levels set at 10._
+* _Once user clicks the link set time interval will start on initiation_
+* _Once set time interval starts state values food, sleep, boredom will decrease by one every second_
+* _User must click buttons to increase state values to keep them above zero_
+* _If a users state values drop below 0 your Tamagotchi will die and image will display_
 
 ## Known Bugs
 
@@ -37,11 +46,11 @@ $ webpack-dev-server
 
 ## Support and contact details
 
-* _Please contact bobbydwise1@hotmail.com_
+* _Please contact ryanleslie33@aol.com or bobbydwise1@hotmail.com_
 
 ## Technologies Used
 
-* _Javascript, jQuery, HTML, CSS, Bootstrap, Atom, NPM, React._
+* _Javascript, HTML, CSS, Atom, NPM, React._
 
 ### License
 
