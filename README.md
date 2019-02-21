@@ -40,6 +40,8 @@ $npm  run start
 * _User must click buttons to increase state values to keep them above zero_
 * _If a users state values drop below 0 your Tamagotchi will die and image will display_
 
+## Component Tree
+![image](https://user-images.githubusercontent.com/43099987/53194894-53ac2500-35c9-11e9-9695-d721c53ef409.png)
 ## Known Bugs
 
 * _To be determined..._
