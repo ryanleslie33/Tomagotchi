@@ -1,20 +1,24 @@
 import React from 'react';
 import Moment from 'moment';
 import PropTypes from 'prop-types';
-
+import * as ExternalStyle from '../src/assets/styles.js';
+import skull from '/Users/Guest/desktop/Tamagotchi/src/assets/images/skull.png'
+import Header from './Header'
 class Home extends React.Component {
+
 
   constructor(props) {
     super(props);
     this.state = {
      bordomLevel: 10,
      sleepLevel:10,
-     foodLevel:3
+     foodLevel:10
     };
     this.handleStartGame = this.handleStartGame.bind(this);
     this.handleFeedToma = this.handleFeedToma.bind(this);
     this.handleSleepToma = this.handleSleepToma.bind(this);
     this.handleBordomToma = this.handleBordomToma.bind(this);
+    this.handlePlayAgain = this.handlePlayAgain.bind(this);
   }
 
   handleStartGame(){
@@ -31,19 +35,21 @@ class Home extends React.Component {
  this.startTimer = setInterval(() =>
    this.handleStartGame(),
 
-   1000
+   2000
  );
 }
+
+// props.componentWillUnmount(){
+//   clearInterval(this.startTimer);
+// }
+
 
 
   handleFeedToma(){
     this.setState({foodLevel: this.state.foodLevel+1});
   }
-  checkLife(){
-  if(this.state.foodlevel=== 0){
-    alert('hey your dead')
-  }
-  }
+
+
 
   handleSleepToma(){
     this.setState({sleepLevel: this.state.sleepLevel+1});
@@ -52,16 +58,28 @@ class Home extends React.Component {
   handleBordomToma(){
     this.setState({bordomLevel: this.state.bordomLevel +1});
   }
+  handlePlayAgain(){
+    this.setState({sleepLevel: 10})
+    this.setState({foodLevel: 10})
+    this.setState({bordomLevel: 10})
+    this.componentDidMount();
+  }
+
 
 
   render(){
-    if(this.state.foodLevel <= 0){
-      var displayThisWhenAlive = 'Tamagotchi is dead';
+    let main = {
+      backgroundColor:'grey',
+      fontSize:'40px',
+    }
+    if(this.state.foodLevel <= 0 || this.state.sleepLevel <= 0){
+         clearInterval(this.startTimer);
+      var displayThisAboutLife = <img src={skull}/>;
     } else {
-      var displaythisWhenDead = 'Tomagotchi is alive';
+      var displayThisAboutLife = <strong>Tomagotchi is alive</strong>;
     }
     return (
-      <div>
+      <div style={main}>
         <button onClick={this.handleStartGame}>Play game</button>
 
         <p>food level :{this.state.foodLevel}</p>
@@ -71,12 +89,23 @@ class Home extends React.Component {
         <button onClick={this.handleFeedToma}>feed</button>
         <button onClick={this.handleSleepToma}>sleep</button>
         <button onClick={this.handleBordomToma}>Play</button>
-        <p>{displayThisWhenAlive}{displaythisWhenDead}</p>
+        <button onClick={this.handlePlayAgain}>Play again</button>
+        <p>{displayThisAboutLife}</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       </div>
 
     );
   }
 }
+// Home.propTypes = {
+//   componentWillUnmount: PropTypes.func
+// };
 
 
 

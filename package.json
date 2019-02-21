@@ -12,6 +12,7 @@
   "author": "Robert Lee",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
     "moment": "^2.18.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
