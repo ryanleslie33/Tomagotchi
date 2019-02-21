@@ -2,7 +2,7 @@ import React from 'react';
 import Moment from 'moment';
 import PropTypes from 'prop-types';
 import * as ExternalStyle from '../src/assets/styles.js';
-import skull from '/Users/Guest/desktop/Tamagotchi/src/assets/images/skull.png'
+import skull from '../src/assets/images/skull.png'
 import Header from './Header'
 class Home extends React.Component {
 
