@@ -1,4 +1,5 @@
-# _Tamagotchi_
+# _Tamagotchi_   
+               ![image](https://user-images.githubusercontent.com/43099987/53194894-53ac2500-35c9-11e9-9695-d721c53ef409.png)
 
 #### _School course in creating a web app in React, with NPM._
 
